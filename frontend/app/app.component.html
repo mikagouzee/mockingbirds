@@ -1,0 +1,47 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <img (click)="onClick(!isLogged)" class="logo img-responsive center-block" [routerLink]="['Dashboard']" src="app/styles/images/basiclogo.png">
+    </div>
+    <div class="col-md-2">
+    </div >
+</div>
+<!--navbar-->
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+    <nav>
+        <ul class="nav nav-tabs">
+      <li role="presentation"><a [routerLink]="['Dashboard']">Home</a></li>       
+      <li role="presentation"><a [routerLink]="['ArticlesCenter']">Articles</a> </li>
+      <li role="presentation"><a [routerLink]="['Tarifs']">Nos Tarifs</a> </li>
+      <li role="presentation"><a [routerLink]="['References']">References</a> </li>
+      <li role="presentation"><a [routerLink]="['Contacts']">Nos coordonnées</a> </li>
+      <li role="presentation"><a *ngIf='isLogged' [routerLink]="['ArticleForm']"> Nouvel Article </a></li>
+      <li><a href={{facebooklink}}><i class="fa fa-lg fa-facebook-square"></i></a></li>
+      <li><a href={{linkedinlink}}><i class="fa fa-lg fa-linkedin-square"></i></a></li>
+      <!--TODO : WRITE COMPONENT TO SEND MAIL-->
+      <li><a href="#"><i class="fa fa-lg fa-envelope"></i></a></li>   
+      <!--<a [outerLink]="['Login']">Loggez vous</a>-->
+        </ul>      
+    </nav>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>
+
+<!--main view-->
+<div class="row ">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+    
+    <router-outlet></router-outlet>
+    </div>
+  <div class="col-md-2">
+    </div>
+    
+</div>    

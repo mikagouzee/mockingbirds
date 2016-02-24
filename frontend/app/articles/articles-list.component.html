@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <accordion>
+            <accordion-group [heading]="article.title" *ngFor="#article of articles">
+                {{article.content}}
+                
+                <button *ngIf='isLogged'>Edit</button>
+            </accordion-group>
+        </accordion>
+    </div>
+    <div class="col-md-2">
+    </div>  
+</div>

@@ -1,0 +1,10 @@
+nav a {
+    text-decoration : none;
+    text-align : center;
+}
+
+.container {
+    border-left: 20px groove beige;
+    border-right: 20px ridge beige;
+    height: 100%;
+}
